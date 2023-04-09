@@ -106,6 +106,7 @@ class Page extends React.Component{
             const message = JSON.parse(evt.data)
             // console.log(this.state.trees, message.trees)
             this.setState({"trees": message.trees})
+            console.log(message.trees);
         };
 
         // websocket onclose event listener
@@ -153,7 +154,7 @@ class Page extends React.Component{
                         <Grid item xs={10}>
                         <Grid className={classes.widthManage}  container spacing={2} >
                             {this.state?.trees?.map(entry => 
-                                (this.props.title=="All Trees"||this.state[this.props.title]==entry.state)&&<Grid key={entry.macid+entry.nick} item xs={12} md={6} lg={4} className={classes.alignCenter}>
+                                (this.props.title=="All Trees"||this.state[this.props.title]==entry.state)&&<Grid key={entry.macid+entry.nick+entry.state} item xs={12} md={6} lg={4} className={classes.alignCenter}>
                                     <TreeCard ws={this.state.ws} deleteTree={this.deleteTree} {...entry}/>                 
                                 </Grid>)
                             }
