@@ -67,6 +67,14 @@ class TreeViewSet(viewsets.ModelViewSet):
                 "type": "update_tree_list"
             },
         )
+    def perform_update(self, serializer):
+        serializer.save()
+        async_to_sync(channel_layer.group_send)(
+            "trees",
+            {
+                "type": "update_tree_list"
+            },
+        )
     
     def update(self, request, *args, **kwargs):
         current_time = datetime.now(timezone.utc)
@@ -107,8 +115,15 @@ class TreeViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(instance, data=temp, partial=partial)
         serializer.is_valid(raise_exception=True)
         self.perform_update(serializer)
-        
+
         if getattr(instance, '_prefetched_objects_cache', None):
             instance._prefetched_objects_cache = {}
         
+        async_to_sync(channel_layer.group_send)(
+            "trees",
+            {
+                "type": "update_tree_list"
+            },
+        )
+
         return Response(status=status.HTTP_200_OK)
