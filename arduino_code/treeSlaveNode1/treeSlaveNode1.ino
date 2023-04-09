@@ -48,7 +48,7 @@ double accelerationThreshold = 250.0;
 
 double vibrationLimit = 145.0;
 double vibrationRange = 35.0;
-int vibrationThreshold = 3;
+int vibrationThreshold = 7;
 int streak = 0;
 
 // User stub
@@ -131,8 +131,6 @@ void sendMessage() {
     //String msg = "[" + server + String(dbId) + "/" + "|" + "{\"name\":\"test\",\"salary\":\"123\",\"age\":\"23\"}]";      
     //postRequest(msg); 
     // Serial.println(registered);
-
-    updateStatus();
     
     if(!registered) {
       String mac = WiFi.macAddress();
@@ -140,6 +138,8 @@ void sendMessage() {
       // Serial.print("Send: ");
       // Serial.println(msg);
       postRequest(msg); 
+    }else {
+      updateStatus();
     }
 }
 

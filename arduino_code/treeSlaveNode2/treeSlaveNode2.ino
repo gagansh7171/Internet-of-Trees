@@ -108,8 +108,6 @@ void sendMessage() {
     //String msg = "[" + server + String(dbId) + "/" + "|" + "{\"name\":\"test\",\"salary\":\"123\",\"age\":\"23\"}]";      
     //postRequest(msg); 
     // Serial.println(registered);
-
-    updateStatus();
     
     if(!registered) {
       String mac = WiFi.macAddress();
@@ -117,6 +115,8 @@ void sendMessage() {
       // Serial.print("Send: ");
       // Serial.println(msg);
       postRequest(msg); 
+    }else {
+      updateStatus();
     }
 }
 
