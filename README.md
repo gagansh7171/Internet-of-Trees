@@ -42,4 +42,4 @@ cd iot_backend
 
 ## Demonstration
 * The demo and working of project are explained in [this presentation](https://docs.google.com/presentation/d/17LH_eSXLSI2FAAQ9XPW_T9FXX8uTQRpLUsLXDStAXqw/edit#slide=id.p).
-* The working pics of frontend are available [here](https://github.com/gagansh7171/Internet-of-Trees/tree/master/pics).
+* The working pics of frontend are available [here](https://github.com/gagansh7171/Internet-of-Trees/tree/master/demonstration/web_server/frontend).
