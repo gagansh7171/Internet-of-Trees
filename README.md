@@ -2,6 +2,7 @@
 [![Arduino](https://img.shields.io/badge/Arduino-1.8.19-yellow.svg)](https://www.arduino.cc/)
 [![PainlessMesh](https://img.shields.io/badge/PainlessMesh-v1.5.0-blue)](https://github.com/gmag11/PainlessMesh)
 [![Adafruit_Sensor](https://img.shields.io/badge/Adafruit__Sensor-v1.1.3-green)](https://github.com/adafruit/Adafruit_Sensor)
+[![Arduino ADXL345 Library](https://img.shields.io/badge/Arduino%20ADXL345%20Library-v1.3.2-red)](https://github.com/adafruit/Adafruit_ADXL345)
 [![Adafruit BMP280 Library](https://img.shields.io/badge/Adafruit%20BMP280%20Library-v2.6.6-orange)](https://github.com/adafruit/Adafruit_BMP280_Library)
 [![Django Version](https://img.shields.io/badge/django-v3.2.4-brightgreen.svg)](https://www.djangoproject.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
