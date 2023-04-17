@@ -74,7 +74,7 @@ void checkIfMine(){
 
 /*
  * Periodically check the buffer and update the response from Python App to Dedicated Node accordingly
- * Using { and } to demarcate replies from the Python app
+ * Using ( and ) to demarcate replies from the Python app
  */
 void cleanBuffer() {
     if(Serial.available()) {
