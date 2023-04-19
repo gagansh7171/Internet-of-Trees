@@ -52,11 +52,11 @@ cd iot_backend
 
 ### Setup Accelerometer Node
 * Upload the code for [slave 1](https://github.com/gagansh7171/Internet-of-Trees/blob/master/arduino_code/treeSlaveNode1/treeSlaveNode1.ino) in the second chip.
-* Connect **SCL** and **SDA** of Accelerometer with pin D1 and D2 of the second chip respectively.
+* Connect **SCL** and **SDA** of Accelerometer with pin D1 and D2 of the second chip respectively. Connect VCC pin to 3.3V power supply.
 
 ### Setup BMP Node
 * Upload the code for [slave 2](https://github.com/gagansh7171/Internet-of-Trees/blob/master/arduino_code/treeSlaveNode2/treeSlaveNode2.ino) in the third chip.
-* Connect **SCL** and **SDA** of BMP280 with pin D4 and D3 of the third chip respectively.
+* Connect **SCL** and **SDA** of BMP280 with pin D4 and D3 of the third chip respectively. Connect VCC pin to 3.3V power supply.
 
 ### Network Setup
 * Setup a public Hotspot (preferably using Mobile Data) so that the master node PC is in reach and is connected in the network. 
